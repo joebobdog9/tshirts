@@ -1,0 +1,210 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    display: flex;
+}
+
+.container {
+    border: 1px white solid;
+    flex-direction: row;
+    display: flex;
+}
+
+.blue {
+    border: 3px #3388DD solid;
+    min-width: 280px;
+    flex-direction: column;
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    position: relative;
+}
+
+.select {
+    flex-grow: 1;
+    flex-direction: row;
+    display: flex;
+    max-height: 50px;
+}
+
+.select > * {
+    flex-grow: 1;
+    position: relative;
+}
+
+.select > *:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.reload {
+    position: absolute;
+    background: #3388DD;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+}
+
+.refresh {
+    border-top: 3px #3388DD solid;
+    border-right: 3px #3388DD solid;
+    background: url(file:///Users/benjaminhoward/Desktop/Iron%20Yard/Week%201/tshirts-intro/images/update23a.png) no-repeat  center;
+    background-size: 40%;
+}
+.refresh:hover {
+
+    border-top: 3px #3388DD solid;
+    border-right: 3px #3388DD solid;
+    background: url(file:///Users/benjaminhoward/Desktop/Iron%20Yard/Week%201/tshirts-intro/images/update23.png) no-repeat  center;
+    background-size: 40%;
+    background-color: #3388DD;
+}
+
+.like {
+    border-top: 3px #3388DD solid;
+    border-right: 3px #3388DD solid;
+    background: url(file:///Users/benjaminhoward/Desktop/Iron%20Yard/Week%201/tshirts-intro/images/add13a.png) no-repeat  center;
+    background-size: 40%;
+}
+
+
+.like:hover {
+    border-top: 3px #3388DD solid;
+    border-right: 3px #3388DD solid;
+    background: url(file:///Users/benjaminhoward/Desktop/Iron%20Yard/Week%201/tshirts-intro/images/add13.png) no-repeat  center;
+    background-size: 40%;
+    background-color: #3388DD;
+}
+
+.size {
+    border-top: 3px #3388DD solid;
+    border-right: 3px #3388DD solid;
+}
+
+.size:hover {
+    border-top: 3px #3388DD solid;
+    border-right: 3px #3388DD solid;
+    color:white;
+    background-color: #3388DD;
+}
+
+.color {
+    border-top: 3px #3388DD solid;
+    border-right: 3px #3388DD solid;
+    background: url(file:///Users/benjaminhoward/Desktop/Iron%20Yard/Week%201/tshirts-intro/images/squarea.png) no-repeat  center;
+}
+
+.color:hover {
+    border-top: 3px #3388DD solid;
+    border-right: 3px #3388DD solid;
+    background: url(file:///Users/benjaminhoward/Desktop/Iron%20Yard/Week%201/tshirts-intro/images/square.png) no-repeat  center;
+    background-color: #3388DD;
+
+}
+
+.cart {
+    border-top: 3px #3388DD solid;
+    background: url(file:///Users/benjaminhoward/Desktop/Iron%20Yard/Week%201/tshirts-intro/images/carta.png) no-repeat  center;
+    background-size: 40%;
+}
+
+.cart:hover {
+    border-top: 3px #3388DD solid;
+    background: url(file:///Users/benjaminhoward/Desktop/Iron%20Yard/Week%201/tshirts-intro/images/cart.png) no-repeat  center;
+    background-size: 40%;
+    background-color: #3388DD;
+}
+
+.textcontainer {
+    font-family: verdana;
+    font-size: 14px;
+    color: #3388DD;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    padding: 1.5rem 0;
+}
+
+.size:hover .size-menu {
+    opacity: 1;
+    pointer-events: inherit;
+}
+
+.size-menu {
+    color: #3388DD;
+    font-family: verdana;
+    font-size: 12px;
+    background-color: white;
+    border: 3px solid #3388DD;
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translate(0%, -125%);
+    opacity: 0;
+    transition: all .5s ease;
+    display: block;
+    pointer-events: none;
+    height: 150px;
+    text-align: center;
+}
+
+.color:hover .color-menu {
+    opacity: 1;
+    pointer-events: inherit;
+
+}
+
+.color-menu {
+    background-color: white;
+    border: 3px solid #3388DD;
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translate(0%, -100%);
+    opacity: 0;
+    transition: all .5s ease;
+    display: block;
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+    content: url(file:///Users/benjaminhoward/Desktop/Iron%20Yard/Week%201/tshirts-intro/images/colorpicker.png);
+
+}
+
+.size {
+    font-family: verdana;
+    font-size: 100%;
+    color: #3388DD;
+    text-align: center;
+}
+
+.square1 {
+    width: 5px;
+    height: 5px;
+    color: red;
+}
+
+input[type=checkbox] + label {
+    content: url(../images/shirt_front.png);
+    padding: 5px 5px 5px 5px
+}
+
+input[type=checkbox]:checked + label {
+    content: url(../images/shirt_back.png);
+    padding: 5px 5px 5px 5px
+}
+
+input#shirt {
+    position: absolute;
+    margin-left: 98%;
+    z-index: +1;
+}
+

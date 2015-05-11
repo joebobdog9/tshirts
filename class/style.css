@@ -1,0 +1,121 @@
+/*blue color
+
+rgb(246 0   94  )  */
+
+
+body, p, span {
+    color:rgb(246,0,94);
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*tshirt container*/
+.tshirt {
+    padding: 1.5rem;
+}
+
+
+
+
+/*shirt image*/
+
+.tshirt > *:first-child{
+    position: relative;
+    border: 1px solid currentColor;
+    border-bottom: none;
+    display: block;
+
+}
+
+.tshirt > *:first-child img:nth-child(2) {
+    position: absolute;
+    top:0;
+    right: 0;
+    border: 1px solid rgb(246,0,94);
+}
+/*5-across*/
+.tshirt > *:nth-child(2) {
+    display: flex;
+}
+
+.tshirt > *:nth-child(2) > * {
+    flex-grow: 1;
+    border-right: 1px solid rgb(246,0,94);
+    position: relative;
+    }
+
+
+
+.tshirt > *:nth-child(2) > *:last-child {
+    border-right: none;
+}
+
+.tshirt > *:nth-child(2) > *:hover > .hover {
+-webkit- animation: fadeInHover: .5s 
+}
+
+@animation
+/*Bottom Text*/
+
+.tshirt > *:nth-child(3) span {
+    padding:1.5rem;
+}
+
+.tshirt > *:nth-child(3) span {
+    float: right;
+    font-weight: bold;
+}
+
+/*Hover*/
+
+.hover {
+    position: absolute;
+    bottom: 100%;
+    left:50%;
+    tranform: translateX(50%,);
+    padding: 50px;
+    background: white;
+    border: 2px solid currentColor;
+    opacity: 0%;
+}
+
+.sizes-hover {
+    text-align: center;  
+}
+
+.sizes-hover p {
+    text-indent: 0
+}
+
+.colors-hover {
+    flex-grow: 1;
+    width: 40px;
+}
+.colors-hover > div > span {
+    display: flex;
+    width: 20px
+}
+
+.colors-hover > div:nth-child(1) > span:nth-child(1) {
+    background-color: blue
+}
+
+.colors-hover > div:nth-child(1) > span:nth-child(2) {
+    background-color: yellow
+}
+
+.colors-hover > div:nth-child(1) > span:nth-child(1) {
+    background-color: green
+}
+.colors-hover > div:nth-child(2) > span:nth-child(2) {
+    background-color: red
+}
+
+.colors-hover span::after {
+    content:"";
+    display: "block";
+    padding-top: 100px;
+}
